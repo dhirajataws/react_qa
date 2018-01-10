@@ -12,18 +12,22 @@ Backend is created to expose microservices for data fetch. Backend supports CORS
 
 Node 8.6.0.
 Ports 3000 for frontend and 8888 for backend.
-Chrome browser v63
+Tested on Chrome browser v63
 
 ## Steps
-1. Git clone project. It will have both frontend and backend server.
+### Frontend
+1. git clone https://github.com/dhirajataws/react_qa.git
+2. cd reactq && yarn install.
+3. yarn start. It will start the webpack-dev-server.
+4. type http://localhost:3000 on browser to lauch the frontend.
+
+### Backend
 
 Start Backend:
-2. cd  yarn start. It will start the server.
+1.	git clone https://github.com/dhirajataws/react_qa_backend.git
+2. cd react_qa_backend && npm install
+3. yarn start.
 use curl http://localhost/carofweek  to test the server.
-
-Start Frontend:
-3. cd reactq && yarn install.
-4. yarn start. It will start the webpack-dev-server. use http://localhost:3000 on browser to lauch the fronted.
 
 ## Tests
 automated unit testing: yarn test
@@ -33,15 +37,8 @@ Frontend port can be reconfigured in webpack.config file.
 
 ## Enhancement
 1. Data fetch can be extended to consume make and models information from server.
-2. UX can be improved.Like an error message or warning message can
-be displayed with details button is not enabled.
+2. UX can be improved.
 3. localStorage can be implemented for storing data locally.
 
 ## Issues
 1. All the pages are not getting exposed individually.
-2. componentWillReceiveProps is invoked two times when the make changes.
-    This logic can be improved by taking out the code for resetting model into
-    reducer. One trade off while doing this is one reducer would be updating
-    value meant to be changed by another reducer. This approach will make is
-    little complex but would be better performance. Trade off between complexity
-    and performance.
